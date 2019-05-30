@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NSE Ticker</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+
+<body>
+
+<br>
+<div class="main">
+<div class="box" id="heading">
+<h1>MRF</h1> 
+</div>
+<div class="box" id="heading">
+<h1>TATA</h1> 
+</div>
+</div>
+<main>
+<div class="box">{% for key, value in priceList.items() %}
+  <div class="item"> 
+  <p>{{ key }}</p>
+  <p>{{ value }}</p>
+ </div>
+
+
+{% endfor %}</div>
+
+<div class="box">{% for key, value in priceList2.items() %}
+  <div class="item"> 
+  <p>{{ key }}</p>
+  <p>{{ value }}</p>
+ </div>
+
+
+{% endfor %}</div>
+</main>
+</body>
+</html>
